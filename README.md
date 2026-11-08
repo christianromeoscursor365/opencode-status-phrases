@@ -1,5 +1,7 @@
 # opencode-status-phrases
 
+#opencode #opencode-plugin #plugin #status-phrases #russian #humor #desktop #tui #ai-coding #claude-code-alternative
+
 Плагин для [OpenCode](https://opencode.ai): во время работы агента показывает над полем ввода смешные статус-фразы на русском — новые меняются при смене шага/инструмента. Работает в Desktop (пилюля над композером) и в TUI (строка статуса).
 
 ## Установка
