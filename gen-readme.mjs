@@ -2,11 +2,8 @@ import { readFileSync, writeFileSync } from "node:fs";
 import { PHRASES } from "./phrases.js";
 
 const list = PHRASES.map((p, i) => `${i + 1}. ${p}`).join("\n");
-const topics = (
-  await fetch("https://api.github.com/repos/christianromeoscursor365/opencode-status-phrases/topics", {
-    headers: { Accept: "application/vnd.github+motto-topic-preview+json", Authorization: `token ${process.env.GH_TOKEN}` },
-  }).then((r) => r.json())
-).topics.map((t) => `#${t}`).join(" ");
+// keep in sync with: gh repo edit ... --add-topic (GitHub API needs auth; offline is simpler)
+const topics = "#opencode #opencode-plugin #plugin #status-phrases #russian #humor #desktop #tui #ai-coding #claude-code-alternative";
 const base = readFileSync("README.base.md", "utf8");
 writeFileSync(
   "README.md",
